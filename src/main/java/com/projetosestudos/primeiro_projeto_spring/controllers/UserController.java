@@ -1,6 +1,6 @@
 package com.projetosestudos.primeiro_projeto_spring.controllers;
 
-import com.projetosestudos.primeiro_projeto_spring.model.User;
+import com.projetosestudos.primeiro_projeto_spring.models.User;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

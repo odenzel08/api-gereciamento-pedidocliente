@@ -1,4 +1,4 @@
-package com.projetosestudos.primeiro_projeto_spring.model;
+package com.projetosestudos.primeiro_projeto_spring.models;
 
 import jakarta.persistence.*;
 
