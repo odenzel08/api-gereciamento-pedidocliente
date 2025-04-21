@@ -2,7 +2,9 @@ package com.projetosestudos.primeiro_projeto_spring.models;
 
 import jakarta.persistence.*;
 
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Table(name = "tb_category")
@@ -12,6 +14,8 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    @Transient
+    private Set<Product> products = new HashSet<>();
 
     public Category(){}
 
@@ -35,6 +39,9 @@ public class Category {
     public void setName(String name) {
         this.name = name;
     }
+    public Set<Product> getProducts() {
+        return products;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -42,7 +49,6 @@ public class Category {
         Category category = (Category) o;
         return Objects.equals(id, category.id);
     }
-
     @Override
     public int hashCode() {
         return Objects.hashCode(id);
